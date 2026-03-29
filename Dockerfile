@@ -22,4 +22,5 @@ ENV BODY_SIZE_LIMIT=80M
 ENV PUBLIC_ENV=production
 EXPOSE 3000
 ENV NODE_ENV=production
+ENV PGSSLMODE=no-verify
 CMD ["sh","-c","mkdir -p /uploads/images && mkdir -p /uploads/models && npm run db:migrate && node server.js"]
